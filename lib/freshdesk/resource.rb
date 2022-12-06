@@ -14,25 +14,25 @@ module Freshdesk
             def handle_response(response)
                 case response.status
                 when 400
-                    raise Error, "Client or Validation Error. #{response.body["error"]}"
+                    raise Error, "Client or Validation Error. #{response.body}"
                 when 401
-                    raise Error, "Authentication Failure. #{response.body["error"]}"
+                    raise Error, "Authentication Failure. #{response.body}"
                 when 403
-                    raise Error, "Access Denied. #{response.body["error"]}"
+                    raise Error, "Access Denied. #{response.body}"
                 when 404
-                    raise Error, "Requested Resource not Found. #{response.body["error"]}"
+                    raise Error, "Requested Resource not Found. #{response.body}"
                 when 405
-                    raise Error, "Method not allowed. #{response.body["error"]}"
+                    raise Error, "Method not allowed. #{response.body}"
                 when 406
-                    raise Error, "Unsupported Accept Header. #{response.body["error"]}"
+                    raise Error, "Unsupported Accept Header. #{response.body}"
                 when 409
-                    raise Error, "Inconsistent/Conflicting State. #{response.body["error"]}"
+                    raise Error, "Inconsistent/Conflicting State. #{response.body}"
                 when 415
-                    raise Error, "Unsupported Content-type. #{response.body["error"]}"
+                    raise Error, "Unsupported Content-type. #{response.body}"
                 when 429
-                    raise Error, "Rate Limit Exceeded. #{response.body["error"]}"
+                    raise Error, "Rate Limit Exceeded. #{response.body}"
                 when 500
-                    raise Error, "Unexpected Server Error. #{response.body["error"]}"
+                    raise Error, "Unexpected Server Error. #{response.body}"
                 end
                 response
             end
