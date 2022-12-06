@@ -30,6 +30,10 @@ module Freshdesk
             GroupsResource.new(self)
         end
 
+        def agents
+            AgentResource.new(self)
+        end
+
         private
             def base_url
                 "https://#{domain}.freshdesk.com/api/v2/"

@@ -9,6 +9,12 @@ module Freshdesk
             )
         end
 
+        def self.from_response_body(response_data, type:)
+            new(
+                data: response_data.map { |attrs| type.new(attrs) }
+            )
+        end
+
         def initialize(data:)
             @data = data
         end

@@ -11,7 +11,9 @@ module Freshdesk
 
   autoload :TicketsResource, 'freshdesk/resources/tickets_resource'
   autoload :GroupsResource, 'freshdesk/resources/groups_resource'
+  autoload :AgentResource, 'freshdesk/resources/agent_resource'
 
   autoload :Ticket, 'freshdesk/objects/ticket'
   autoload :Group, 'freshdesk/objects/group'
+  autoload :Agent, 'freshdesk/objects/agent'
 end
