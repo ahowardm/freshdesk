@@ -26,6 +26,10 @@ module Freshdesk
             TicketsResource.new(self)
         end
 
+        def groups
+            GroupsResource.new(self)
+        end
+
         private
             def base_url
                 "https://#{domain}.freshdesk.com/api/v2/"

@@ -10,6 +10,8 @@ module Freshdesk
   autoload :Collection, 'freshdesk/collection'
 
   autoload :TicketsResource, 'freshdesk/resources/tickets_resource'
+  autoload :GroupsResource, 'freshdesk/resources/groups_resource'
 
   autoload :Ticket, 'freshdesk/objects/ticket'
+  autoload :Group, 'freshdesk/objects/group'
 end
