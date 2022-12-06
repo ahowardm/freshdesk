@@ -22,6 +22,10 @@ module Freshdesk
             end
         end
 
+        def tickets
+            TicketsResource.new(self)
+        end
+
         private
             def base_url
                 "https://#{domain}.freshdesk.com/api/v2/"

@@ -6,7 +6,10 @@ module Freshdesk
   autoload :Client, 'freshdesk/client'
   autoload :Error, 'freshdesk/error'
   autoload :Object, 'freshdesk/object'
+  autoload :Resource, 'freshdesk/resource'
   autoload :Collection, 'freshdesk/collection'
+
+  autoload :TicketsResource, 'freshdesk/resources/tickets_resource'
 
   autoload :Ticket, 'freshdesk/objects/ticket'
 end
